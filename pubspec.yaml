@@ -1,7 +1,7 @@
 author: "Mbadiwe Nnaemeka Ronald <ron2tele@gmail.com>"
 name: number_to_word_english
 description: NumberToWord converts numbers(integers) to the English language number representation system and in many different customizable formats.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/ron4fun/number_to_word_english
 repository: https://github.com/ron4fun/number_to_word_english
 
