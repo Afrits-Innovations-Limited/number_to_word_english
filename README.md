@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ## NumberToWord [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Ron4fun/number_to_word_english/blob/main/LICENSE) [![Build Status](https://travis-ci.com/Ron4fun/number_to_word_english.svg?branch=main)](https://travis-ci.com/Ron4fun/number_to_word_english)
-=======
-## NumberToWord [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Ron4fun/number_to_word_english/blob/master/LICENSE) [![Build Status](https://travis-ci.org/Ron4fun/number_to_word_english.svg?branch=master)](https://travis-ci.org/Ron4fun/number_to_word_english)
->>>>>>> 80f8f02fdf204113ee79b46d004f450c08b87ca9
 
 **`NumberToWord`** is a library written in **Dart** language that converts numbers(integers) to the English language number representation system and in many different customizable formats.
 
