@@ -104,7 +104,7 @@ class NumberToWord {
   /// ```dart
   /// print(NumberToWord.Convert(1994, ReadType.Double, ',', SpacingType.Right); // nineteen, ninety four
   /// ```
-  static String Convert([int digits, ReadType read_type = ReadType.Default, String delimiter = ',', SpacingType spacing_type = SpacingType.Right]) {
+  static String Convert([int digits = 0, ReadType read_type = ReadType.Default, String delimiter = ',', SpacingType spacing_type = SpacingType.Right]) {
 
     var digitsString = digits.toString();
     var wordings = '';
@@ -138,7 +138,7 @@ class NumberToWord {
   }
 
   /// Returns the resolved delimiter representation.
-  static String _ResolveDelimiter([String delimiter, SpacingType spacing]) {
+  static String _ResolveDelimiter([String delimiter = '', SpacingType spacing = SpacingType.NoWrap]) {
     delimiter = delimiter.trim();
 
     if (delimiter.isEmpty) {
@@ -169,9 +169,7 @@ class NumberToWord {
   /// NumberToWord._GetAmountInStr(5) == "five";
   /// ```
   static String _GetAmountInStr(int digits) {
-    if (digits == null) {
-      throw ArgumentNullException('digits cannot be null');
-    }
+    
     if (digits > MaxInteger) {
       throw FormatException('digits is too large');
     }
@@ -261,7 +259,7 @@ class NumberToWord {
       for (var n in NumberToWord._NumArray.keys) {
         // if dictionary key is == digit string
         if (n == first) {
-          first = NumberToWord._NumArray[n] + ' hundred'; // store the word in first
+          first = NumberToWord._NumArray[n]! + ' hundred'; // store the word in first
         }
       }
     }
@@ -276,10 +274,10 @@ class NumberToWord {
         if (n == second)
         {
           if (first != '') {
-            second = ' and ' + NumberToWord._NumArray[n]; // store the word in first
+            second = ' and ' + NumberToWord._NumArray[n]!; // store the word in first
           }
           else {
-            second = NumberToWord._NumArray[n];
+            second = NumberToWord._NumArray[n]!;
           }
         }
       }
@@ -294,10 +292,10 @@ class NumberToWord {
         // if dictionary key is == digit string
         if (n == third) {
           if (first.isNotEmpty && second.isEmpty) {
-            third = ' and ' + NumberToWord._NumArray[n]; // store the word in first
+            third = ' and ' + NumberToWord._NumArray[n]!; // store the word in first
           }
           else {
-            third = ' ' + NumberToWord._NumArray[n];
+            third = ' ' + NumberToWord._NumArray[n]!;
           }
         }
       }
